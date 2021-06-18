@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  vertical-align: top;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px/1.2;
+  font-weight: 400;
+  color: #222;
+}
+ul, ol, li {
+  list-style: none;
+}
+a, button, label {
+  display: inline-block;
+}
+button {
+  outline: none;
+}
+label, input, button, select, img {
+  vertical-align: middle;
+}
+p {
+  max-height: 999999px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.static {
+  width: 1190px;
+  margin: 0 auto;
+}
+#header {
+  height: 123px;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+#header .static {
+  position: relative;
+}
+#header .logo {
+  float: left;
+  margin-top: 30px;
+}
+#header .logo a {
+  width: 132px;
+  height: 64px;
+  background: url(../img/logo.png) no-repeat;
+  font-size: 0;
+}
+#gnb {
+  float: left;
+  margin: 63px 0 42px 57px;
+}
+#gnb ul li {
+  float: left;
+  position: relative;
+}
+#gnb>ul>li>a {
+  display: block;
+  padding: 0 29px;
+  height: 18px;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #444;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#gnb>ul>li>ul {
+  position: absolute;
+  width: 100%;
+  padding-top: 60px;
+  z-index: -1;
+  text-align: center;
+  visibility: hidden;
+  opacity: 1;
+  height: 180px;
+}
+#gnb li a {
+  font-family: 'Roboto';
+}
+#gnb>ul>li:nth-child(1)>a {
+  width: 94px;
+}
+#gnb>ul>li:nth-child(2)>a {
+  width: 54px;
+}
+#gnb>ul>li:nth-child(3)>a {
+  width: 52px;
+}
+#gnb>ul>li:nth-child(4)>a {
+  width: 114px;
+}
+#gnb>ul>li:nth-child(5)>a {
+  width: 64px;
+}
+#gnb>ul>li:nth-child(6)>a {
+  width: 84px;
+}
+#gnb>ul>li>ul>li>a {
+  display: block;
+  padding-top: 0.5rem 0;
+  font-size: 14px;
+  font-family: 'Roboto';
+}
+#gnb li a {
+  font-weight: 400;
+}
+
+#header .btn {
+  float: right;
+  margin-top: 55px;
+  width: 133px;
+  background-color: #00a5b1;
+  border-radius: 20px;
+  padding: 8px 0 9px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+#header .lang {
+  position: absolute;
+  top: 25px;
+  right: 0;
+}
+#header .static::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+footer {
+  display: block;
+  height: 209px;
+}
+.footer-top {
+  height: 43px;
+}
+.footer-top .static {
+  position: relative;
+  padding-bottom: 27px;
+}
+.footer-top ul {
+  overflow: hidden;
+}
+.footer-top ul li {
+  display: block;
+  font-size: 14px;
+  font-weight: 700px;
+  float: left;
+  margin-right: 30px;
+}
+.footer-top ul li a {
+  color: #3a466a;
+}
+.footer-top ul li span {
+  color: #00a6b1;
+}
+.footer-top .btn-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.btn-top {
+  display: inline-block;
+  width: 27px;
+  height: 15px;
+  background: url(../img/ico-arr-top.png);
+  font-size: 0;
+}
+.footer-btm {
+  height: 163px;
+  border-top: 3px solid #3a466a;
+}
+.footer-btm .static {
+  overflow: hidden;
+  padding: 25px 0 50px;
+}
+.footer-btm-info {
+  float: left;
+  padding-left: 180px;
+  background: url(../img/footer-logo.png) no-repeat 0 5px;
+}
+.footer-btm-info .info {
+  font-size: 12px;
+}
+.footer-btm-info address {
+  display: inline-block;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 20px;
+}
+.footer-btm-info .info span {
+  display: inline-block;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  vertical-align: middle;
+}
+.footer-btm-info .info .tt {
+  margin-right: 10px;
+}
+.footer-btm-info .info .ts {
+  margin-right: 20px;
+}
+.footer-btm-info .copy {
+  margin-top: 30px;
+  color: #b8b8b8;
+  font-weight: 300;
+  font-size: 12px;
+}
+.footer-btm-sns {
+  float: right;
+}
+.footer-btm-sns a {
+  margin: 0 4px;
+}
+.ico-fb, .ico-inst, .ico-youtube, .ico-app {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+}
+.ico-fb {
+  background: url(../img/ico-fb.png) no-repeat 50% 50%;
+}
+.ico-inst {
+  background: url(../img/ico-insta.png) no-repeat 50% 50%;
+}
+.ico-youtube {
+  background: url(../img/ico-youtub.png) no-repeat 50% 50%;
+}
+.footer-btm-sns a:last-child {
+  margin-right: 0;
+}
+.ico-app {
+  background: url(../img/ico-app.png) no-repeat 50% 50%;
+}
