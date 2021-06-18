@@ -1,0 +1,75 @@
+@charset "utf-8";
+a, address, area, article, aside, audio, b, body, br, button, canvas,
+caption, cite, code, col, colgroup, dd, del, div, dl, dt, em, embed, fieldset,
+figcaption, figure, footer, form, frame, frameset, h1, h2, h3, h4, h5,
+h6, head, header, hr, html, i, iframe, img, ins, input, label, legend, li,
+link, map, meta, nav, object, ol, p, pre, q, rp, rt, ruby, s, script,
+section, select, source, span, strong, style, sub, summary, sup, table,
+tbody, td,textarea, tfoot, th, thead, time, title, tr, u, ul, video {margin: 0; padding: 0; font-family: inherit; font-style: normal; font-weight: inherit; font-size: inherit; line-height: inherit; text-decoration: inherit; color: inherit; vertical-align: top; outline: none;}
+
+html, body{width: 100%; height: 100%;}
+body{font: normal 400 14px/1.2 'NotoSans', sans-serif; color: #222}
+ul,ol,li{list-style: none;}
+img,hr{border: none;}
+p{max-height: 999999px;} /* font boosting 폰트크기가 잘안먹을때 사용*/
+table{width: 100%; border-spacing: 0; table-layout: fixed;}
+th,td{vertical-align: middle;}
+label {cursor: pointer;}
+a,button,label{display:inline-block}
+legend, hr, caption{visibility: hidden; overflow: hidden; width: 0px; height: 0px; font-size: 0px; line-height: 0px; border: none; background: none; position: absolute; left: -9999em; top: -9999em; opacity: 0;}
+fieldset,iframe {border: none;}
+sup,sub{line-height: 1;}
+label, input, button, select, img{vertical-align:middle}
+button{cursor:pointer;outline:none;background:none}
+label{cursor: pointer}
+input, select, textarea{display: inline-block;box-sizing: border-box}
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=password]{height: 38px; padding: 10px 10px 10px 10px; border: 1px solid #e2e2e2; font-size: 14px; line-height: 18px; color: #222;  background: #ffffff;box-sizing:border-box;}
+
+textarea{width: 100%;padding: 20px; border: 1px solid #cccccc; font-size: 14px; line-height: 18px; color: #222; background: #ffffff;box-sizing: border-box}
+select::-ms-expand{display: none;}
+::-webkit-input-placeholder{color: #959595;}
+::-moz-placeholder{color: #959595;}
+:-ms-input-placeholder{color: #959595;}
+:-moz-placeholder{color: #959595;}
+::-moz-selection{background: #222; color: #ffffff;}
+::selection{background: #222; color: #ffffff;}
+button,
+input[type=file],
+input[type=image],
+input[type=reset],
+input[type=button],
+input[type=submit]{border: none; background: none; border-radius: 0; cursor: pointer; -webkit-appearance: none; appearance: none;}
+a:focus,
+input:focus,
+button:focus,
+select:focus,
+textarea:focus{outline: 1px dotted #000000; outline-offset: -1px;}
+a:link{text-decoration: none}
+a:hover{text-decoration: none;}
+a:visited{text-decoration: none;}
+a:active{text-decoration: none;outline: none;}
+a:focus{text-decoration: none;}
+.checkbox{display:inline-block}
+.checkbox input{position: absolute;clip: rect(1px,1px,1px,1px);}
+.checkbox input + label:before{content:'';display: inline-block;width:22px;height:22px;margin-right:10px;background:#e8e8e8;vertical-align:top}
+.checkbox input + label{line-height:22px;color:#444}
+
+.radio{display:inline-block}
+.radio input{position: absolute;clip: rect(1px,1px,1px,1px);}
+.radio input + label:before{content:'';display: inline-block;width:22px;height:22px;margin-right:10px;background:#e8e8e8;vertical-align:top;border:1px solid #cdcdcd;border-radius:100%;;box-sizing: border-box;}
+.radio input + label{position:relative;line-height:22px;color:#999}
+.radio input:checked + label{color:#222}
+.radio input:checked + label:after{content:'';position:absolute;top:50%;left:7px;width:8px;height:8px;margin:-4px 0 0 0;background:#3a466a;border-radius:100%;color:#222}
+#accessibility{position:relative}
+#accessibility a{display:block;height:1px;width:1px;margin-bottom:-1px;overflow:hidden;text-align:center;color:#000;white-space:nowrap}
+#accessibility a:focus,
+#accessibility a:active{position:absolute;height:auto;width:100%;padding:5px;margin-bottom:10px;width:100%;background:#fff;z-index:9999}
+.skip, hr, legend{position:absolute;left:-5000px}
+.skip, hr, legend, caption{visibility:hidden;width:0;height:0;font-size:0;line-height:0;overflow:hidden}
+.sr-only{position: absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);}
+.hide {visibility: hidden; overflow: hidden; position: absolute; left: -9999em; top: -9999em; width: 0px; height: 0px; border: none; background: none; font-size: 0px; line-height: 0px; opacity: 0;}
+
+
