@@ -92,41 +92,65 @@ p {
   background: url(../img/logo.png) no-repeat;
   font-size: 0;
 }
+
 #gnb {
-  float: left;
+  float: left; /*로고 옆에 나란히 위치*/
   margin: 63px 0 4px 57px;
 }
-#gnb>ul>li {
+#gnb .mainmenu {
+  overflow: hidden;
+  height: 60px;
+  border: lightsalmon solid 1px;
+}
+#gnb .mainmenu:hover {
+  height: 270px; /*펼친 뒤 높이*/
+}
+#gnb>.mainmenu>li {
   float: left;
   position: relative;
+  border: yellow solid 1px;
 }
-#gnb>ul>li>a {
+#gnb>.mainmenu>li>a {
   display: block;
   padding: 0 29px;
   height: 18px;
   line-height: 1.2;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: uppercase; /*소문자를 대문자로 변환*/
+  font-weight: bold; 
 }
-#gnb ul li a {
+#gnb .mainmenu li a {
   display: block;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   color: #444;
+  border: lightseagreen solid 1px;
 }
-#gnb ul li:hover a{
-  color: #3a466a;
+/* #gnb ul>li.on {
+  color: hotpink;
+} */
+#gnb .mainmenu li:hover a{
+  color: hotpink; /*메뉴 선택 시 글자색 변경*/
 }
 
-#gnb ul li .submenu li {
-  padding: 3px 0 10px 0;
+#gnb .mainmenu:hover .submenu {
+  visibility: visible; /*메인메뉴 선택 시 서브메뉴 펼쳐짐*/
 }
-#gnb ul li .submenu li a:hover{
-  color: #3a466a;
+
+#gnb .submenu li {
+  display: block;
+  padding: 3px 0 10px 0;
+  
+}
+/* #gnb .mainmenu:hover li .submenu:hover li a{
+  color: hotpink;
   font-weight: bold;
   text-decoration: underline;
-}
-#gnb>ul>li>.submenu {
+} */
+#gnb>.mainmenu>li>.submenu>li>a:hover{text-decoration:underline;font-weight:700;}
+#gnb>.mainmenu>li:hover a{color:hotpink}
+
+#gnb>.mainmenu>li>.submenu {
   position: absolute;
   width: 100%;
   padding-top: 60px;
@@ -135,26 +159,25 @@ p {
   visibility: hidden;
   opacity: 1;
   height: 180px;
+  border: lightsalmon solid 1px;
 }
-#gnb ul > li:hover .submenu {
-  visibility: visible;
-}
-/* #gnb>ul>li>.submenu:hover {
+#gnb>ul>li>.submenu:hover {
   z-index: 12;
   visibility: visible;
   opacity: 1;
-} */
-#gnb>ul>li>.submenu>li>a {
+}
+#gnb .submenu>li>a {
   padding-top: 0.5rem 0;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
+  border: lightseagreen solid 1px;
 }
-#gnb>ul>li:nth-child(1)>a { width: 94px; }
-#gnb>ul>li:nth-child(2)>a { width: 54px; }
-#gnb>ul>li:nth-child(3)>a { width: 52px; }
-#gnb>ul>li:nth-child(4)>a { width: 114px;}
-#gnb>ul>li:nth-child(5)>a { width: 64px; }
-#gnb>ul>li:nth-child(6)>a { width: 84px; }
+#gnb>.mainmenu>li:nth-child(1)>a { width: 94px; }
+#gnb>.mainmenu>li:nth-child(2)>a { width: 54px; }
+#gnb>.mainmenu>li:nth-child(3)>a { width: 52px; }
+#gnb>.mainmenu>li:nth-child(4)>a { width: 114px;}
+#gnb>.mainmenu>li:nth-child(5)>a { width: 64px; }
+#gnb>.mainmenu>li:nth-child(6)>a { width: 84px; }
 
 #header .btn {
   float: right;
@@ -176,7 +199,7 @@ p {
 }
 .lang .kr {
   color: #444;
-  margin: 0 0 0 5px;
+  /* margin: 0 0 0 5px; */
   font-weight: 600;
 }
 .lang .en {
@@ -219,11 +242,11 @@ footer {
 }
 .footer-top ul li a {
   color: #3a466a;
-  font-weight: 900;
+  font-weight: bold;
 }
 .footer-top ul li span {
   color: #00a6b1;
-  font-weight: 900;
+  font-weight: bold;
 }
 .footer-top .btn-top {
   position: absolute;
@@ -255,7 +278,7 @@ footer {
 }
 .footer-btm-info .info {
   font-size: 12px;
-
+  font-weight: bold;
 }
 .footer-btm-info address {
   display: inline-block;
