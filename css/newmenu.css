@@ -54,6 +54,10 @@
 .btn-btm-center .btn-bor{min-width:117px}
 
 /*menu list*/
+.static {
+    width: 1190px;
+    margin: 0 auto;
+}
 .b-blue {
   background: #3a466a;
 }
