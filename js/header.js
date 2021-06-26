@@ -21,7 +21,7 @@
       onLoad : function() {
         getElements();
         getWindowScrl();
-        _.loadmotion.init()
+        // _.loadmotion.init();
         _.headerACtion();
         _.gnbOpacity();
         _.btnTopACt();
@@ -33,74 +33,74 @@
     }
   })(ui);
 
-  ui.loadmotion = (function() {
-    return {
-      init: function() {
-        var f = this;
-        _.$motion.each(function(idx, obj) {
-          obj.t = $(obj).offset().top;
-          obj.h = $(obj).outerHeight /2;
-          obj.p = obj.t + obj.h;
-          obj.e = 'load.lmotion'+idx+' scroll.lmotion'+idx;
-          f.scroll(obj);
-          $(window).on(obj.e, function() {
-            f.scroll(obj);
-          });
-        });
-        scroll : function(obj) {
-          if(_.winscrlT + _.winsizeH > obj.p){
-            if($(obj).find('> .value').length){
-              if(!$(obj).hasClass('n-active')){
-                $(obj).find('> .value').YJnumber({
-                  delay : 600,
-                  speed : 1200,
-                  startNum : '0'
-                });
-              }
-            }
-            $(obj).addClass('n-active');
-            $(window).off(obj.e);
-          }
-        }
-      }
-    })(ui);
+  // ui.loadmotion = (function() {
+  //   return {
+  //     init: function() {
+  //       var f = this;
+  //       _.$motion.each(function(idx, obj) {
+  //         obj.t = $(obj).offset().top;
+  //         obj.h = $(obj).outerHeight /2;
+  //         obj.p = obj.t + obj.h;
+  //         obj.e = 'load.lmotion'+idx+' scroll.lmotion'+idx;
+  //         f.scroll(obj);
+  //         $(window).on(obj.e, function() {
+  //           f.scroll(obj);
+  //         });
+  //       });
+  //       scroll : function(obj) {
+  //         if(_.winscrlT + _.winsizeH > obj.p){
+  //           if($(obj).find('> .value').length){
+  //             if(!$(obj).hasClass('n-active')){
+  //               $(obj).find('> .value').YJnumber({
+  //                 delay : 600,
+  //                 speed : 1200,
+  //                 startNum : '0'
+  //               });
+  //             }
+  //           }
+  //           $(obj).addClass('n-active');
+  //           $(window).off(obj.e);
+  //         }
+  //       }
+  //     }
+  //   })(ui);
 
-    ui.tabAction = function(navi, cont){
-      var _ = ui;
+  //   ui.tabAction = function(navi, cont){
+  //     var _ = ui;
   
-      function action(tab, idx){
-        tab.def.$navi.eq(idx).addClass('on').siblings().removeClass('on');
-        tab.def.$cont.eq(idx).addClass('on').siblings().removeClass('on');
-        tab.def.offsetTop = tab.def.$navi.offset().top;
+  //     function action(tab, idx){
+  //       tab.def.$navi.eq(idx).addClass('on').siblings().removeClass('on');
+  //       tab.def.$cont.eq(idx).addClass('on').siblings().removeClass('on');
+  //       tab.def.offsetTop = tab.def.$navi.offset().top;
   
-        tab.def.idx = idx;
-      }
+  //       tab.def.idx = idx;
+  //     }
   
-      var tabAction = (function(){
-        return {
-          def : {
-            idx : 0,
-            $navi : $(navi).children(),
-            $cont : $(cont).children()
-          },
-          init : function(){
-            var _this = this;
+  //     var tabAction = (function(){
+  //       return {
+  //         def : {
+  //           idx : 0,
+  //           $navi : $(navi).children(),
+  //           $cont : $(cont).children()
+  //         },
+  //         init : function(){
+  //           var _this = this;
   
-            _this.def.$navi.on('click', function(){
-              action(_this, $(this).index());
-            });
+  //           _this.def.$navi.on('click', function(){
+  //             action(_this, $(this).index());
+  //           });
   
-            return _this;
-          },
-          setIndex : function(idx){
-            action(this, idx);
-            $('html, body').animate({scrollTop : this.def.offsetTop-_.$header.outerHeight()}, 300);
-          }
-        };
-      })();
+  //           return _this;
+  //         },
+  //         setIndex : function(idx){
+  //           action(this, idx);
+  //           $('html, body').animate({scrollTop : this.def.offsetTop-_.$header.outerHeight()}, 300);
+  //         }
+  //       };
+  //     })();
   
-      return tabAction.init();
-    }
+  //     return tabAction.init();
+  //   }
 
   ui.headerACtion = function(_) {
     var _ = this;
@@ -156,9 +156,5 @@
       ui.init.onSCroll();
     }
   });
-
-  
-
-
 
 })(jQuery);
