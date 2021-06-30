@@ -53,6 +53,14 @@
     });
   }
 
+  ui.gnbOpacity = function () {
+		if ($('.main').length) {
+			$(window).scrollTop() > 150 ? $('#header').addClass('on') : $('#header').removeClass('on');
+		} else {
+			$(window).scrollTop() > 150 ? $('#header').addClass('sticky') : $('#header').removeClass('sticky');
+		}
+	};
+  
   ui.btnTopACt = function() {
     $('.btn-top').click(function() {
       $('html body').animate({scrollTop : 0}, 1000);
